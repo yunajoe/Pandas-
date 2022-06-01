@@ -1,0 +1,51 @@
+from openpyxl import Workbook
+from openpyxl.styles import PatternFill, Font
+
+# 워크북 객체 생성 
+wb = Workbook()
+
+# 첫번째 워크시트 이름 지정해주기 
+ws1 = wb.active
+ws1.title="연습1"
+
+# 워크시트에 컬럼 이름 지정해주기 
+col_name=["국가","음식"]
+ws1.append(col_name)
+
+# 셀에 입력할 데이터 
+data = {
+   '대한민국': '비빔밥',
+    '미국': '피자',
+    '일본': '스시',
+    '멕시코': '타코',     
+}
+
+# 워크시트1에대가 데이터를 넣어봄
+for n in data.items():
+    ws1.append(n)
+    
+# 컬럼부분에만 배경색을 바꿔보기 
+y_color = PatternFill("solid","00FFFF00")
+
+for n in range(1,len(col_name)+1):
+    ws1.cell(1,n).fill=y_color
+
+    
+# 2번째 워크시트 생성
+ws2 = wb.create_sheet(title="연습2")
+
+# 열너비 변경
+ws2.column_dimensions["A"].width=50  #A열
+ws2.column_dimensions["B"].width=10  #B열
+ws2.column_dimensions["C"].witdh=200 #C열
+
+ws2["A1"]="하이"  #  A1 셀 선택
+ws2["B1"]="헬로우" # B1셀 선택
+ws2["A7"]="안녕하세요"  # A7셀 선택
+ws2["B2"].fill = PatternFill("solid", fgColor="000000FF") # 셀 배경 컬러 변경
+
+font_color=Font("rgb(255,255,153)")
+ws2["B3"].value="봉쥬르"
+ws2["B3"].font= font_color
+    
+wb.save("C:\\Users\yunaj\\Crawling\\practice.xlsx")
