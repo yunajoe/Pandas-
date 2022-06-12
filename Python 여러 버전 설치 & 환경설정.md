@@ -5,7 +5,7 @@ https://www.python.org/downloads/windows/
 
 3.8 버전을 새롭게 설치해 보았다 (3.9, 3.10은 기존에 있었음)
 
-![1](https://user-images.githubusercontent.com/86518113/173232690-7bf05b58-84e2-4742-83fc-b2f536bf7ef1.jpg){: width="100" height="100"}
+![1](https://user-images.githubusercontent.com/86518113/173232690-7bf05b58-84e2-4742-83fc-b2f536bf7ef1.jpg)
 
 ![2](https://user-images.githubusercontent.com/86518113/173232698-585dc1ab-c25f-4088-bb85-4cd000715f7e.jpg) 
 
